@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 
-from shoe.models import Shoe
+from shoe.models import Shoe, ShoeSize
 
 
 # Create your models here.
@@ -18,6 +18,7 @@ class Cart(models.Model):
 class CartItem(models.Model):
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
     shoe = models.ForeignKey(Shoe, on_delete=models.CASCADE)
+    shoe_size = models.ForeignKey(ShoeSize, on_delete=models.CASCADE, null=True)
     quantity = models.IntegerField(null=False)
 
     class Meta:
