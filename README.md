@@ -9,7 +9,7 @@
 cd .\ecommerce_shoe_store\src\
 pip install -r requirements.txt
 ```
-check *settings**.py* file if database username/passowrd is correct and make *shoe_store* database in postgres
+check *settings.py* file if database username/passowrd is correct and make *shoe_store* database in postgres
 ```sh
 python manage.py migrate
 ```
