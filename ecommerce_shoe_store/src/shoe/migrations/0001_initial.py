@@ -9,10 +9,19 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('category', '0001_initial'),
     ]
 
     operations = [
+        migrations.CreateModel(
+            name='Category',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('name', models.CharField(max_length=50)),
+            ],
+            options={
+                'db_table': 'category',
+            },
+        ),
         migrations.CreateModel(
             name='Shoe',
             fields=[
@@ -21,7 +30,7 @@ class Migration(migrations.Migration):
                 ('image_url', models.CharField(null=True)),
                 ('price', models.FloatField()),
                 ('description', models.CharField(max_length=300, null=True)),
-                ('category', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='category.category')),
+                ('category', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='shoe.category')),
             ],
             options={
                 'db_table': 'shoe',

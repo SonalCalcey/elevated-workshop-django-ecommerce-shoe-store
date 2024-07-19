@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'corsheaders',
     'shoe',
     'user',
-    'category',
     'media'
 ]
 
@@ -85,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'shoe_store',
         'USER': 'postgres',
-        'PASSWORD': 'postgres',
+        'PASSWORD': 'ancon',
         'HOST': 'localhost',
         'PORT': '5432'
     }

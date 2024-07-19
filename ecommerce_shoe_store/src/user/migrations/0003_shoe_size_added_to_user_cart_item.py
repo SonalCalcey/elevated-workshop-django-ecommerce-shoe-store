@@ -7,7 +7,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('shoe', '0002_populate_shoes'),
+        ('shoe', '0003_populate_shoes'),
         ('user', '0002_create_super_user'),
     ]
 

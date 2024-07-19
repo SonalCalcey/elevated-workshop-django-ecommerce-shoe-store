@@ -45,6 +45,7 @@ def populate_shoes_and_sizes(apps, schema_editor):
 class Migration(migrations.Migration):
     dependencies = [
         ('shoe', '0001_initial'),
+        ('shoe', '0002_populate_categories'),
     ]
 
     operations = [

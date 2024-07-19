@@ -3,7 +3,7 @@ import json
 
 from django.db import migrations, transaction
 
-from category.models import Category
+from shoe.models import Category
 
 
 def populate_categories(apps, schema_editor):
@@ -25,7 +25,7 @@ def populate_categories(apps, schema_editor):
 
 class Migration(migrations.Migration):
     dependencies = [
-        ('category', '0001_initial'),
+        ('shoe', '0001_initial'),
     ]
 
     operations = [
