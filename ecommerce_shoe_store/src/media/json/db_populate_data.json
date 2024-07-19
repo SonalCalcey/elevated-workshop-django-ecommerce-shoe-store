@@ -1,0 +1,155 @@
+{
+  "collections": [
+    {
+      "id": 1,
+      "name": "Running Shoes"
+    },
+    {
+      "id": 2,
+      "name": "Sneakers"
+    },
+    {
+      "id": 3,
+      "name": "Sandals"
+    },
+    {
+      "id": 4,
+      "name": "Flip Flops"
+    }
+  ],
+  "shoes": [
+    {
+      "id": 1,
+      "name": "Nike Air Zoom Pegasus 38",
+      "image_url": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/e2ff01fa-7e97-4536-b4f8-a9f21992cba3/pegasus-38-road-running-shoes-5HVSDm.png",
+      "price": 129.99,
+      "description": "Responsive running shoes with Zoom Air cushioning.",
+      "collection_id": 1,
+      "variants": [
+        {
+          "variant": "Size 43"
+        },
+        {
+          "variant": "Size 46"
+        },
+        {
+          "variant": "Size 40"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Nike Air Max 270",
+      "image_url": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/pyyixbczj6u5kiwhpjik/air-max-270-womens-shoes-Pgb94t.png",
+      "price": 149.99,
+      "description": "Air Max cushioning for all-day comfort and style.",
+      "collection_id": 2,
+      "variants": [
+        {
+          "variant": "Size 48"
+        },
+        {
+          "variant": "Size 46"
+        },
+        {
+          "variant": "Size 40"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Nike Benassi Slide",
+      "image_url": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/77874acd-bf25-4037-bf21-9b442d1b28eb/victori-one-slides-3V75Sf.png",
+      "price": 24.99,
+      "description": "Classic slide sandals with a lightweight feel.",
+      "collection_id": 3,
+      "variants": [
+        {
+          "variant": "Black Size 9"
+        },
+        {
+          "variant": "White Size 9"
+        },
+        {
+          "variant": "Black Size 8"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Nike Ultra Comfort 3 Flip Flops",
+      "image_url": "https://www.tradeinn.com/f/13706/137069101/nike-ultra-comfort-3-flip-flops.jpg",
+      "price": 34.99,
+      "description": "Comfortable flip flops with foam cushioning.",
+      "collection_id": 4,
+      "variants": [
+        {
+          "variant": "Size 43"
+        },
+        {
+          "variant": "Size 46"
+        },
+        {
+          "variant": "Size 40"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Nike React Infinity Run Flyknit",
+      "image_url": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/666a4f6a-76c8-4954-9d3f-5ef783504850/custom-reactx-infinity-rn-4-by-you.png",
+      "price": 169.99,
+      "description": "Stable and cushioned running shoes with React foam.",
+      "collection_id": 1,
+      "variants": [
+        {
+          "variant": "Size 7"
+        },
+        {
+          "variant": "Size 9"
+        },
+        {
+          "variant": "Size 6"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Nike Air Force 1 '07",
+      "image_url": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a12a1e20-18d2-480e-bb30-85a4c213a161/air-force-1-07-lv8-mens-shoes-3Q0nlJ.png",
+      "price": 99.99,
+      "description": "Iconic sneakers with durable leather and Air-Sole cushioning.",
+      "collection_id": 2,
+      "variants": [
+        {
+          "variant": "Size 43"
+        },
+        {
+          "variant": "Size 36"
+        },
+        {
+          "variant": "Size 50"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Nike Benassi JDI Sandals",
+      "image_url": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/939dec4a-5e1c-4b15-abe4-d48bf609bd9f/benassi-jdi-slides-pvTjw0Pv.png",
+      "price": 24.99,
+      "description": "Casual slide sandals with foam midsole for lightweight comfort.",
+      "collection_id": 3,
+      "variants": [
+        {
+          "variant": "Size 43"
+        },
+        {
+          "variant": "Size 46"
+        },
+        {
+          "variant": "Size 48"
+        }
+      ]
+    }
+  ]
+}
