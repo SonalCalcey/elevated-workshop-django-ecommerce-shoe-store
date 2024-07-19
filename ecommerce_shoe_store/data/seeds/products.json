@@ -1,23 +1,4 @@
-{
-  "collections": [
-    {
-      "id": 1,
-      "name": "Running Shoes"
-    },
-    {
-      "id": 2,
-      "name": "Sneakers"
-    },
-    {
-      "id": 3,
-      "name": "Sandals"
-    },
-    {
-      "id": 4,
-      "name": "Flip Flops"
-    }
-  ],
-  "shoes": [
+[
     {
       "id": 1,
       "name": "Nike Air Zoom Pegasus 38",
@@ -152,4 +133,3 @@
       ]
     }
   ]
-}

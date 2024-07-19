@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 
-from shoe.models import ProductVariant
+from product.models import ProductVariant
 
 
 # Create your models here.

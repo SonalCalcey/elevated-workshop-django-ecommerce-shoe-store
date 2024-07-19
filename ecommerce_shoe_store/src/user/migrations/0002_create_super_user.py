@@ -2,7 +2,6 @@
 from django.contrib.auth.models import User
 from django.db import migrations
 
-
 def create_super_user(apps, schema_editor):
     if not User.objects.filter(username='admin').exists():
         User.objects.create_superuser(
@@ -10,7 +9,6 @@ def create_super_user(apps, schema_editor):
             email='admin@calcey.com',
             password='Test@123'
         )
-
 
 class Migration(migrations.Migration):
     dependencies = [

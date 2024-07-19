@@ -8,10 +8,10 @@ class StandardResultsSetPagination(PageNumberPagination):
 
     def get_paginated_response(self, data):
         return Response({
-            'metadata': {
-                'page': self.page.number,
+            'meta': {
+                'current_page': self.page.number,
                 'total_pages': self.page.paginator.num_pages,
-                'total_results': self.page.paginator.count
+                'total': self.page.paginator.count
             },
             'items': data
         })

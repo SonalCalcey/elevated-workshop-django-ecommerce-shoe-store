@@ -10,7 +10,6 @@ class HandledException(Exception):
 
 
 class NotFoundException(HandledException):
-
     def __init__(self, code=status.HTTP_404_NOT_FOUND, message='Resource Not Found'):
         super().__init__(code=code, message=message)
 

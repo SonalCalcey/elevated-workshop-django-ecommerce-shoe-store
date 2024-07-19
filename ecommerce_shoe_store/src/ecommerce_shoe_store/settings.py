@@ -9,11 +9,12 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+SEEDER_DIR = os.path.abspath(os.path.join(BASE_DIR, '../data/seeds'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -39,9 +40,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'drf_yasg',
     'corsheaders',
-    'shoe',
+    'product',
     'user',
-    'media',
     'common'
 ]
 
@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'shoe_store',
         'USER': 'postgres',
-        'PASSWORD': 'postgres',
+        'PASSWORD': 'admin',
         'HOST': 'localhost',
         'PORT': '5432'
     }

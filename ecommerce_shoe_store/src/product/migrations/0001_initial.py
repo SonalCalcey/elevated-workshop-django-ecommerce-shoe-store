@@ -30,7 +30,7 @@ class Migration(migrations.Migration):
                 ('image_url', models.CharField(null=True)),
                 ('price', models.FloatField()),
                 ('description', models.CharField(max_length=300, null=True)),
-                ('collection', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='shoe.collection')),
+                ('collection', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='product.collection')),
             ],
             options={
                 'db_table': 'product',
@@ -42,7 +42,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('variant', models.CharField(max_length=50)),
                 ('stock', models.IntegerField()),
-                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='shoe.product')),
+                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='product.product')),
             ],
             options={
                 'db_table': 'product_variant',

@@ -4,7 +4,7 @@ from rest_framework import viewsets, mixins
 from rest_framework.decorators import action
 
 from common.middleware.exception_types import MethodNotImplementedException
-from common.permissions import AllowAnyPermission
+from common.permissions.permissions import AllowAnyPermission
 from user.serializers.serializer import UserSerializer
 
 
