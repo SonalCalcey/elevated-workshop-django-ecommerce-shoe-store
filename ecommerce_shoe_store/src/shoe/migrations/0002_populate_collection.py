@@ -3,24 +3,24 @@ import json
 
 from django.db import migrations, transaction
 
-from shoe.models import Category
+from shoe.models import Collection
 
 
-def populate_categories(apps, schema_editor):
+def populate_collections(apps, schema_editor):
     # Load JSON data
     with open('media/json/db_populate_data.json', 'r') as file:
         data = json.load(file)
 
         # Load categories
-        categories = data.get('categories', [])
+        collections = data.get('collections', [])
 
-        category_list = [
-            Category(id=category['id'], name=category['name'])
-            for category in categories
+        collection_list = [
+            Collection(id=collection['id'], name=collection['name'])
+            for collection in collections
         ]
 
         with transaction.atomic():
-            Category.objects.bulk_create(category_list)
+            Collection.objects.bulk_create(collection_list)
 
 
 class Migration(migrations.Migration):
@@ -29,5 +29,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(populate_categories),
+        migrations.RunPython(populate_collections),
     ]

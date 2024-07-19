@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 
-from shoe.models import Shoe, ShoeSize
+from shoe.models import ProductVariant
 
 
 # Create your models here.
@@ -10,15 +10,11 @@ class Cart(models.Model):
 
     class Meta:
         db_table = 'cart'
-        constraints = [
-            models.UniqueConstraint(fields=['user'], name='unique_user_constraint')
-        ]
 
 
 class CartItem(models.Model):
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
-    shoe = models.ForeignKey(Shoe, on_delete=models.CASCADE)
-    shoe_size = models.ForeignKey(ShoeSize, on_delete=models.CASCADE, null=True)
+    product_variant = models.ForeignKey(ProductVariant, on_delete=models.CASCADE, null=True)
     quantity = models.IntegerField(null=False)
 
     class Meta:

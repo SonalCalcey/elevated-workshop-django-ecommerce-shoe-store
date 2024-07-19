@@ -2,27 +2,28 @@ from django.db import models
 
 
 # Create your models here.
-class Category(models.Model):
+class Collection(models.Model):
     name = models.CharField(max_length=50, null=False)
 
     class Meta:
-        db_table = 'category'
+        db_table = 'collection'
 
 
-class Shoe(models.Model):
+class Product(models.Model):
     name = models.CharField(max_length=50, null=False)
     image_url = models.CharField(null=True)
     price = models.FloatField(null=False)
     description = models.CharField(max_length=300, null=True)
-    category = models.ForeignKey(Category, on_delete=models.PROTECT)
+    collection = models.ForeignKey(Collection, on_delete=models.PROTECT)
 
     class Meta:
-        db_table = 'shoe'
+        db_table = 'product'
 
 
-class ShoeSize(models.Model):
-    size = models.IntegerField(null=False)
-    shoe = models.ForeignKey(Shoe, on_delete=models.CASCADE)
+class ProductVariant(models.Model):
+    variant = models.CharField(max_length=50, null=False)
+    stock = models.IntegerField(null=False)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
 
     class Meta:
-        db_table = 'shoe_size'
+        db_table = 'product_variant'
