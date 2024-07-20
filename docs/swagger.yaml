@@ -136,33 +136,6 @@ paths:
           description: Internal server error
 
   /carts/{cart_id}:
-    post:
-      summary: Add item to cart
-      tags:
-        - Cart
-      parameters:
-        - name: cart_id
-          in: path
-          required: true
-          description: ID of the cart
-          schema:
-            type: integer
-            example: 1
-      requestBody:
-        description: Add product to cart with specified quantity
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/CartItem'
-      responses:
-        '404':
-          description: Product Varient not found
-        '201':
-          description: Item added to cart successfully
-        '500':
-          description: Internal server error
-
     get:
       summary: Get user's cart details
       tags:
@@ -203,6 +176,35 @@ paths:
                       $ref: '#/components/schemas/CartProduct'
                   meta:
                     $ref: '#/components/schemas/ListMeta'
+        '500':
+          description: Internal server error
+
+
+  /carts/{cart_id}/add:
+    post:
+      summary: Add item to cart
+      tags:
+        - Cart
+      parameters:
+        - name: cart_id
+          in: path
+          required: true
+          description: ID of the cart
+          schema:
+            type: integer
+            example: 1
+      requestBody:
+        description: Add product to cart with specified quantity
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CartItem'
+      responses:
+        '404':
+          description: Product Varient not found
+        '201':
+          description: Item added to cart successfully
         '500':
           description: Internal server error
 components:
