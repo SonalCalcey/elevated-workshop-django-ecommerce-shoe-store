@@ -4,7 +4,7 @@
 
 *slides*: https://docs.google.com/presentation/d/1kygs28JsRayLuCaHpF3qXCrElGrtJWnvw9BvgrsoIns/edit?usp=sharing
 
-#### Get up and running
+### Get up and running
 ```sh
 cd .\ecommerce_shoe_store\src\
 pip install -r requirements.txt
