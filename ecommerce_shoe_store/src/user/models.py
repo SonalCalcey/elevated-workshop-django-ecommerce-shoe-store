@@ -13,9 +13,11 @@ class Cart(models.Model):
 
 
 class CartItem(models.Model):
-    cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
+    cart = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='cart_item')
     product_variant = models.ForeignKey(ProductVariant, on_delete=models.CASCADE, null=True)
     quantity = models.IntegerField(null=False)
 
     class Meta:
         db_table = 'cart_item'
+
+

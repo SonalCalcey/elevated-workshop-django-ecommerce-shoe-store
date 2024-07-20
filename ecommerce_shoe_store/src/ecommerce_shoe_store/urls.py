@@ -22,10 +22,14 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework_simplejwt.views import TokenRefreshView
 
 
-from user.views import UserViewSet
+from user.views import UserViewSet, CartViewSet, CartItemViewSet
+from product.views import CollectionViewSet, ProductViewSet
 
 router = DefaultRouter()
 router.register(r'user', UserViewSet, basename='user')
+router.register(r'collection', CollectionViewSet, basename='collection')
+router.register(r'product', ProductViewSet, basename='product')
+router.register(r'cart', CartViewSet, basename='cart')
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -44,5 +48,6 @@ urlpatterns = [
     path('', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('auth/login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('auth/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('api/v1/', include(router.urls)),
+    path('', include(router.urls)),
+    path('user/<int:user_id>/cart/<int:cart_id>/add', CartItemViewSet.as_view({'post': 'create'}), name='cart item'),
 ]

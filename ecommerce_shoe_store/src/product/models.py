@@ -23,7 +23,7 @@ class Product(models.Model):
 class ProductVariant(models.Model):
     variant = models.CharField(max_length=50, null=False)
     stock = models.IntegerField(null=False)
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='product_variant')
 
     class Meta:
         db_table = 'product_variant'

@@ -51,11 +51,11 @@ paths:
         '500':
           description: Internal server error
 
-  /categories:
+  /collections:
     get:
       summary: Get list of collections
       tags:
-        - Categories
+        - Collections
       responses:
         '200':
           description: A list of collections
