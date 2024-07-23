@@ -49,5 +49,5 @@ urlpatterns = [
     path('auth/login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('auth/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('', include(router.urls)),
-    path('user/<int:user_id>/cart/<int:cart_id>/add', CartItemViewSet.as_view({'post': 'create'}), name='cart item'),
+    path('user/<int:user_id>/cart/<str:cart_id>/add', CartItemViewSet.as_view({'post': 'create'}), name='cart item'),
 ]

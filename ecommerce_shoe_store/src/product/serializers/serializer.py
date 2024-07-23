@@ -23,9 +23,15 @@ class ProductSerializer(ModelSerializer):
         model = Product
         exclude = ['collection', 'description']
 
+class ProductDetailsProductVariantSerializer(ModelSerializer):
+
+    class Meta:
+        model = ProductVariant
+        exclude = ['product']
+
 class ProductDetailSerializer(ModelSerializer):
     collection = CollectionSerializer(read_only=True, required=False)
-    product_variant = ProductVariantSerializer(read_only=True, required=False, many=True)
+    product_variant = ProductDetailsProductVariantSerializer(read_only=True, required=False, many=True)
 
     class Meta:
         model = Product
