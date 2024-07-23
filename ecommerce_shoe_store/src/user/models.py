@@ -6,6 +6,7 @@ from product.models import ProductVariant
 
 # Create your models here.
 class Cart(models.Model):
+    id = models.UUIDField(primary_key=True, editable=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
