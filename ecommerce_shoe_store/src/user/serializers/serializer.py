@@ -42,3 +42,12 @@ class CartSerializer(ModelSerializer):
     class Meta:
         model = Cart
         exclude = ['id', 'user']
+
+
+class CartItemPostSerializer(ModelSerializer):
+    product_variant_id = IntegerField(required=True)
+    quantity = IntegerField(required=True)
+
+    class Meta:
+        model = CartItem
+        exclude = ['id', 'product_variant']

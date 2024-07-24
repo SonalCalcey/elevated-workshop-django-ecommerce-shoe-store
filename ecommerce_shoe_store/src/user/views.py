@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from common.middleware.exception_types import MethodNotImplementedException
 from common.permissions.permissions import AllowAnyPermission
 from user.models import Cart, CartItem
-from user.serializers.serializer import UserSerializer, CartSerializer, CartItemSerializer
+from user.serializers.serializer import UserSerializer, CartSerializer, CartItemSerializer, CartItemPostSerializer
 import uuid
 
 class UserViewSet(viewsets.GenericViewSet, mixins.CreateModelMixin, mixins.RetrieveModelMixin):
@@ -28,7 +28,7 @@ class CartViewSet(viewsets.GenericViewSet, mixins.RetrieveModelMixin):
 
 class CartItemViewSet(viewsets.GenericViewSet, mixins.CreateModelMixin):
     queryset = CartItem.objects.all()
-    serializer_class = CartItemSerializer
+    serializer_class = CartItemPostSerializer
 
     def create(self, request, user_id: int, cart_id: str, *args, **kwargs):
         if Cart.objects.filter(id=cart_id).first() is None:
