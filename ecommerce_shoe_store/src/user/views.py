@@ -34,7 +34,7 @@ class CartItemViewSet(viewsets.GenericViewSet, mixins.CreateModelMixin):
         if Cart.objects.filter(id=cart_id).first() is None:
             Cart.objects.create(user_id=user_id,id=cart_id)
 
-        serializer = CartItemSerializer(data=request.data)
+        serializer = CartItemPostSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.validated_data['cart_id'] = cart_id
 
