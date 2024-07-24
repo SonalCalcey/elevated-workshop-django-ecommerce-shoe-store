@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-97s+-31c=y37_)c@(48z+uag*3he9l4h+n*h@1(fgof0wja3u&
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.us-east-2.compute.amazonaws.com', '3.140.126.49', 'localhost']
 
 # Application definition
 
@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'ecommerce_shoe_store.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'shoe_store',
         'USER': 'postgres',
         'PASSWORD': 'admin',
@@ -135,3 +135,5 @@ CORS_ALLOWED_ORIGINS = []
 CORS_ALLOW_ALL_ORIGINS = True
 
 APPEND_SLASH = False
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
