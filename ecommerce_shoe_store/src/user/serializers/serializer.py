@@ -50,4 +50,4 @@ class CartItemPostSerializer(ModelSerializer):
 
     class Meta:
         model = CartItem
-        exclude = ['id', 'product_variant']
+        exclude = ['id', 'cart', 'product_variant']
