@@ -14,7 +14,7 @@ class UserSerializer(ModelSerializer):
         model = User
         fields = '__all__'
 
-class ProductSerializer(ModelSerializer):
+class CartProductSerializer(ModelSerializer):
     collection = CollectionSerializer()
 
     class Meta:
@@ -22,7 +22,7 @@ class ProductSerializer(ModelSerializer):
         fields = '__all__'
 
 class ProductVariantSerializer(ModelSerializer):
-    product = ProductSerializer()
+    product = CartProductSerializer()
 
     class Meta:
         model = ProductVariant
